@@ -1,0 +1,383 @@
+/* Google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Global */
+
+* {
+    font-family: "Poppins", serif;
+    /* border: 3px solid white; */
+}
+
+:root {
+    --green-clr:#DFFE02;
+    --gray-clr:#898989;
+    --dark-blue-clr:#171C22;
+}
+
+html, body{
+    scroll-behavior: smooth;
+}
+/* Colors */
+
+.bg-green {
+    background: var(--green-clr);
+}
+
+.bg-dark-blue {
+    background: var(--dark-blue-clr);
+}
+
+.text-green {
+    color: var(--green-clr);
+}
+
+.text-gray{
+    color: var(--gray-clr);
+} 
+
+
+/* Default */
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.section-container{
+    padding-block: 4rem;
+}
+
+.text-wrapper{
+    width: 500px;
+}
+
+.glow {
+    position: relative;
+}
+
+.glow::before {
+    position: absolute;
+    content: "";
+    background: var(--green-clr);
+    inset: 4rem;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(70px);
+}
+
+/* Navbar */
+
+.nav-logo {
+    width: 13rem;
+}
+
+.nav-btn {
+    border : .1rem solid var(--green-clr) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-btn:hover {
+    background: transparent !important;
+    color: var(--green-clr) !important;
+}
+
+.navbar-toggler-icon {
+    width: 2.2rem;
+    background-image:	url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+    ;
+}
+
+.nav-link{
+    color: white !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover{
+    color: var(--green-clr) !important;
+    transform: scale(1.1);
+}
+
+
+/* Hero Section */
+
+.hero-img{
+    width: 32rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border-top: 1rem solid white;
+    border-bottom: 1rem solid white;
+    background-image: url(assets/heropic.webp);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 
+    0 0 1rem white,
+    inset 0 0 1rem white,
+    0 0 2rem var(--green-clr),
+    inset 0 0 2rem var(--green-clr),
+    0 0 7rem var(--green-clr),
+    inset 0 0 1rem var(--green-clr)
+    ;
+}
+
+.hero-section{
+    min-height: 87vh;
+}
+
+.hero-section h1{
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: "Merriweather Sans", serif;
+}
+
+.main-text{
+    letter-spacing: .2rem;
+    font-size: .8rem;
+}
+
+
+/* About Section */
+
+.about-section{
+    min-height: 100vh;
+}
+
+.about-img{
+    width: 32rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    /* border-top: 1rem solid white;
+    border-bottom: 1rem solid white; */
+    background-image: url(assets/aboutpic.webp);
+    background-position: center;
+    background-size: cover;
+    /* box-shadow: 
+    0 0 1rem white,
+    inset 0 0 1rem white,
+    0 0 2rem var(--green-clr),
+    inset 0 0 2rem var(--green-clr),
+    0 0 7rem var(--green-clr),
+    inset 0 0 1rem var(--green-clr)
+    ; */
+    position: relative;
+}
+
+.about-img::before{
+    content: "";
+    position: absolute;
+    background: var(--green-clr);
+    inset: 1rem;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(70px);
+}
+
+.about-section span{
+    margin-top: -1rem;
+}
+
+
+/* Services Section */
+
+.services-section{
+    min-height: 100vh;
+}
+
+.hover-card:hover{
+    /* transform: scale(1.1); */
+    background-color:var(--green-clr);
+    transform: scale(.9);
+    transition: all 0.5s ease-in-out;
+}
+
+.hover-card:hover *{
+    /* transform: scale(0.9); */
+    color: black !important;;
+} 
+
+
+/* Portfolio Section */
+
+.portfolio-section{
+    min-height: 100vh;
+}
+
+.mycard{
+    width: 21rem;
+    /* background:red  ; */
+}
+
+.mycard img{
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cardy{
+    height: 100%;
+    cursor: pointer;
+}
+
+.port-btn:hover{
+    background: var(--green-clr) !important;
+    color: black !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+
+/* Contact Section */
+
+.contact-section{
+    min-height: 100vh;
+}
+
+form{
+    width: 32rem;
+    margin: auto;
+    border-radius: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.contact-btn {
+    background: #000;
+    color: white;
+}
+
+.contact-btn:hover {
+    background: var(--green-clr);
+    color:black;
+    border: .1rem solid black;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.form-control{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.form-control:focus{
+    box-shadow: none;
+}
+
+form button{
+    margin-top: 2rem;
+}
+
+form textarea{
+    border: none;
+    resize: none;
+    padding: 1rem;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Footer Section */
+
+.line{
+    width: 100%;
+    height: .1rem;
+    background: var(--green-clr);
+    margin-top: 2rem;
+}
+
+footer i:hover{
+    color: var(--green-clr);
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries */
+@media screen and (max-width: 680px) {
+    /* Navbar */
+    li{
+        text-decoration: none;
+    }
+    /* hero section */
+    .hero-section h1{
+        font-size: 3rem;
+    }
+
+    .hero-img{
+        width: 17rem;
+    }
+
+    .hero-section{
+        min-height: 72vh;
+    }
+
+    /* about section */
+    .about-img{
+        width: 17rem;
+        margin: auto;
+    }
+
+    .mob-text p{
+        font-size: .9rem;
+    }
+
+    .text-wrapper{
+        width: 100%;
+    }
+    
+    /* Portfolio section */
+    .cardy{
+        box-shadow: 0px 2px 6px #DFFE02;
+    }
+
+    .mycard{
+        width: auto;
+    }
+
+    /* contact Section */
+    form{
+        width: 100%;
+    }
+
+    .contact-section{
+        min-height: 80vh;
+    }
+}
+
+/* No Scrollbar */
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* For Firefox */
+  html {
+    scrollbar-width: none;
+  }
+  
+  /* For Internet Explorer & Edge */
+  body {
+    -ms-overflow-style: none;
+  }
+  
+  textarea {
+    resize: none;
+  }
